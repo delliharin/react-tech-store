@@ -35,13 +35,19 @@ export default function ProductFilter() {
                     name="search"
                     id="search"
                     onChange={handleChange}
-                    value={company}
+                    value={search}
                     className="filter-item"
                   />
                 </div>
                 <div>
                   <label htmlFor="company">company</label>
-                  <select name="company" id="company" className="filter-item">
+                  <select
+                    name="company"
+                    id="company"
+                    onChange={handleChange}
+                    value={company}
+                    className="filter-item"
+                  >
                     {companies.map((company, index) => {
                       return (
                         <option key={index} value={company}>
