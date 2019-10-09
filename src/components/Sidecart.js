@@ -1,9 +1,8 @@
-import React from 'react';
-import { ProductConsumer } from '../context';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
-export default function Sidecart() {
+import React from "react";
+import { ProductConsumer } from "../context";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+export default function SideCart() {
   return (
     <ProductConsumer>
       {value => {
@@ -16,8 +15,8 @@ export default function Sidecart() {
                   <li key={item.id} className="cart-item mb-4">
                     <img
                       width="35"
-                      src={`../${item.image}`}
-                      // src={item.image}
+                      // src={`../${item.image}`}
+                      src={item.image}
                       alt="cart item"
                     />
                     <div className="mt-3">
@@ -47,13 +46,13 @@ export default function Sidecart() {
 
 const CartWrapper = styled.div`
   position: fixed;
-  top: 61px;
-  right: 0px;
+  top: 60px;
+  right: 0;
   width: 100%;
   height: 100%;
   background: var(--mainGrey);
   z-index: 1;
-  transform: ${props => (props.show ? 'translateX(0)' : 'translateX(100%)')};
+  transform: ${props => (props.show ? "translateX(0)" : "translateX(100%)")};
   border-left: 4px solid var(--primaryColor);
   transition: var(--mainTransition);
   @media (min-width: 576px) {
