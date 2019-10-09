@@ -9,7 +9,7 @@ export default function Contact() {
           <Title title="contact us" />
           <form
             className="mt-5"
-            action="https://formspree.io/johnwolf.lobo@gmail.com"
+            action="https://formspree.io/harin.vihari@gmail.com"
             method="POST"
           >
             <div className="form-group">
